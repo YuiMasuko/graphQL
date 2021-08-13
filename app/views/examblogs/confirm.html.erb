@@ -1,0 +1,9 @@
+<h3>以下の内容で、送信する。</h3>
+<%= form_with(model: @examblog, url: examblogs_path, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <p>タイトル:<%= @examblog.title %></p>
+  <p>本文:<%= @examblog.content %></p>
+  <%= form.submit  "登録する" %>
+  <%= form.submit "もどる", name: 'back' %>
+<% end %>
